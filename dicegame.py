@@ -15,7 +15,7 @@ def main(Total_Players_List, rounds):
         print("\nRound" + str(round_number))
 
         for player in Total_Players_List:
-            input(player + ", Press Enter to Roll the Dice!")
+            input(player + ", Press Enter to Roll the Dice!\n")
             dice_result = rolling_dice()
             print(player + " rolled a " + str(dice_result))
             score_system[player] += dice_result
@@ -46,7 +46,10 @@ try:
 
         Total_Players_List = []
 
+        print("\nEnter Players' Name: ")
+
         for i in range(Total_Players):
+            
             Player_Name = input(f"{i+1} Player: ")
             Total_Players_List.append(Player_Name)
 
@@ -57,7 +60,7 @@ try:
         print("\nThanks for Joining the Game! Lets Start the Game!\n")
         main(Total_Players_List, rounds)
         
-
+        input("Press Enter to exit the program...")
 
 ##During the input Total_players if the value turns out to be invalid it will print the statement
 except ValueError: 
